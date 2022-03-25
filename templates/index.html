@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Chatbot</title>
+  </head>
+  <body class="bg-secondary bg-gradient">
+    <div class="container-fluid">
+
+      <div class="card card-primary text-center mt-5">
+        <div class="card-header text-white bg-primary bg-gradient">
+          Faça sua pergunta ao Bot
+        </div>
+        <div class="card-body">
+          <div id="container-chat" class="position-relative" style="overflow-y:scroll; height: 300px;">
+            <div class="badge bg-info bg-gradient text-wrap text-left align-middle position-absolute left-0 start-0 mt-3">
+                  <i class="bi bi-person-fill" style="font-size: 1rem; color: white;"></i>
+                  Quem descobriu o Brasil?
+            </div>
+            <br><br>
+            <div class="badge bg-success bg-gradient text-wrap text-left position-absolute right-0 start-0 mt-3">
+                  <i class="bi bi-robot"style="font-size: 1rem; color: white;"></i>
+                  Foi Pedro Álvares Cabral que descobriu o Brasil.
+            </div>
+            <br><br>
+            <div class="badge bg-info bg-gradient text-wrap text-left position-absolute left-0 start-0 mt-3">
+                  <i class="bi bi-person-fill" style="font-size: 1rem; color: white;"></i>
+                  Quais os nomes das caravelas da expedição de Pedro Álvares de Cabral?
+            </div>
+            <br><br>
+            <div class="badge bg-success bg-gradient text-wrap text-left position-absolute right-0 start-0 mt-3">
+                  <i class="bi bi-robot"style="font-size: 1rem; color: white;"></i>
+                  O nome das três caravelas eram: Mina, Pinta e Santa Maria.
+            </div>
+            <br><br>
+            <div class="badge bg-info bg-gradient text-wrap text-left position-absolute left-0 start-0 mt-3">
+                  <i class="bi bi-person-fill" style="font-size: 1rem; color: white;"></i>
+                  Quais os nomes dos estados que compõem a região sul do Brasil?
+            </div>
+            <br><br>
+            <div class="badge bg-success bg-gradient text-wrap text-left position-absolute right-0 start-0 mt-3">
+                  <i class="bi bi-robot"style="font-size: 1rem; color: white;"></i>
+                  Os estados que compõem a região sul do Brasil são: Paraná, Santa Catarina e Rio Grande do Sul.
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="input-group mb-3">
+            <input type="text" id="input-pergunta" class="form-control" placeholder="Digite a sua pergunta"
+            onkeydown="if(event.keyCode == 13)$('#btn-envia-pergunta').trigger('click')">
+            <button class="btn btn-primary" id="btn-envia-pergunta" type="button" onClick="btnEnviarPergunta($('#input-pergunta').val())">
+                <i class="bi bi-send"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- JavaScript customizados -->
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/chatbot.js') }}" ></script>
+  </body>
+</html>
