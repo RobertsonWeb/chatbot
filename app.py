@@ -13,5 +13,5 @@ def chatbot():
         pergunta = request.args.get('pergunta')
         resposta = perguntar(pergunta)
     except Exception as e:
-        resposta = 'Ops! Ocorreu um erro e eu não pude responder a sua pergunta!'
+        resposta = 'Ops! Ocorreu um erro e eu não pude responder a sua pergunta! Erro:{}'.format(e)
     return jsonify(resposta=resposta)

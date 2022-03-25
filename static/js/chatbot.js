@@ -29,7 +29,7 @@ function renderizarWidgetMensagemChat(usuarioOrigem, mensagem) {
 function btnEnviarPergunta(pergunta){
     if(pergunta){
         renderizarWidgetMensagemChat('usuario', pergunta);
-        $.getJSON($SCRIPT_ROOT + '/chatbot', {
+        $.getJSON('/chatbot', {
             pergunta: pergunta
         }, function(data) {
             renderizarWidgetMensagemChat('bot', data.resposta);

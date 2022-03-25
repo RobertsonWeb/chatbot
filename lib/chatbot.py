@@ -1,7 +1,7 @@
 import transformers
 from transformers import pipeline
 
-from ..configuracoes import MODEL, FINE_TUNNING
+from .configuracoes import MODEL, FINE_TUNNING
 
 def perguntar(pergunta):
     qea = pipeline("question-answering", model=MODEL)
