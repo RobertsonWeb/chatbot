@@ -26,13 +26,25 @@ function renderizarWidgetMensagemChat(usuarioOrigem, mensagem) {
     rolarScroolContainderChat();
 }
 
+function loadingResposta(){
+    $("#input-pergunta").val('Aguarde, o Bot está respondendo a sua pergunta...').prop('readonly', true);
+    $("#btn-envia-pergunta").prop('disabled', true);
+}
+
+function resetLoading(){
+    $("#input-pergunta").val('').prop('readonly', false);
+    $("#btn-envia-pergunta").prop('disabled', false);
+}
+
 function btnEnviarPergunta(pergunta){
     if(pergunta){
         renderizarWidgetMensagemChat('usuario', pergunta);
+        loadingResposta();
         $.getJSON('/chatbot', {
             pergunta: pergunta
         }, function(data) {
             renderizarWidgetMensagemChat('bot', data.resposta);
+            resetLoading();
         });
         return false;
     }

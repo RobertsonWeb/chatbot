@@ -1,6 +1,6 @@
 # Chatbot
 
-Chatbot desenvolvido em Python com framework web Flask e a biblioteca de processamento da linguagem natural para TensorFlow 2.0 e PyTorch, chamada transformers.
+Chatbot desenvolvido em Python com framework web Flask e a biblioteca de processamento da linguagem natural chamada transformer que usa TensorFlow 2.0 e/ou PyTorch.
 
 ### Para rodar
 **Recomendo criar um ambiente virtual com Python3:**
