@@ -22,6 +22,6 @@ Chatbot desenvolvido em Python com framework web Flask e a biblioteca de process
 
 ```flask run --host=0.0.0.0 --debugger```
 
-** Abrir no navegador **
+**Abrir no navegador**
 
 http://localhost:5000
