@@ -3,7 +3,7 @@
 Chatbot desenvolvido em Python com framework web Flask e a biblioteca de processamento da linguagem natural chamada transformer que usa TensorFlow 2.0 e/ou PyTorch.
 
 ### Para rodar
-**Recomendo criar um ambiente virtual com Python3:**
+**Recomendo criar um ambiente virtual com Python 3.12.1**
 
 ```virtualenv -p python3 venv```
 
